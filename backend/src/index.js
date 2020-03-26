@@ -14,8 +14,13 @@
 //express é um micro framework que contem funcionalidades para ajudar na codificação
 const express = require('express');
 const routes = require('./routes');
+
+//cors é um modulo que define que pode acessar o backend
+const cors = require('cors');
 const app = express();
+
 //informr para converter o corpo de requisições para um objeto javaScript
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 

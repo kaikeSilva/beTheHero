@@ -4,7 +4,6 @@ const connection = require('../database/connection');
 module.exports = {
     //metodo para listar ongs
     async index(request,response) {
-        //definir os dados na entrada garante que não seja guardado nenhum dado indevido
         const  ongs = await connection('ongs').select('*');
 
         //retornar o id para para a ong
