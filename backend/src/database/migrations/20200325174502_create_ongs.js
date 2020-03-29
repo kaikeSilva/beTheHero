@@ -1,5 +1,5 @@
 /**
- * migrations s~]ao estruturas para criação de tabelas
+ * migrations são estruturas para criação de tabelas
  * up: metodo que cria a tabela
  * down: metodso que destroi a tabela
  * comando: npx knex migrate:make create_ongs
