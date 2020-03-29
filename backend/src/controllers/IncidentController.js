@@ -16,7 +16,7 @@ module.exports = {
         //cada página tem um limite de 5, offset é para buscar pelo número da página
         const incidents = await connection('incidents')
             .join('ongs','ongs.id','=','incidents.ong_id')
-            .limit(20)
+            .limit(5)
             .offset((page -1) * 5)
             .select([
                     'incidents.*',
@@ -26,7 +26,7 @@ module.exports = {
                     'ongs.city',
                     'ongs.uf'
                 ]);
-        console.log(response.header());
+
         //retornar o id para para a ong
         return response.json(incidents);
     },
